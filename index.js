@@ -22,7 +22,13 @@ app.post('/result4/', (req, res) => {
    
     const xTest = req?.headers?.['x-test']
     const xBody = req?.body
-    res.json({ message: 'itmo308555', "x-result": xTest, "x-body": xBody })
+    //res.json({ message: 'itmo308555', "x-result": xTest, "x-body": xBody })
+     res.write(JSON.stringify({
+            "message":"itmo308555",
+            "x-result":xTest,
+            "x-body":xBody
+            }
+            ))
 })
 app.get('/result4/', (req, res) => {
     
