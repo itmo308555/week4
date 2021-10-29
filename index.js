@@ -15,7 +15,7 @@ const CORS = {
 
 app.post('/result4/', (req, res) => {
     
-   /*  res.writeHead(200,{
+    res.writeHead(200,{
               'Content-Type':'application/json',
               ...CORS,
           })
@@ -28,9 +28,9 @@ app.post('/result4/', (req, res) => {
             "x-result":xTest,
             "x-body":xBody
             }
-            ))*/
+            ))
     
-      res.writeHead(200,{
+      /*res.writeHead(200,{
               'Content-Type':'application/json',
               ...CORS,
           })
@@ -50,7 +50,7 @@ app.post('/result4/', (req, res) => {
             }
             ))
       }
-      res.end()
+      res.end() */
     
     
     
