@@ -31,12 +31,14 @@ app.get('/result4/', (req, res) => {
     const xTest = 'baovn'
     const xBody = 'abc'
     
-    res.write(JSON.stringify({
+  /*  res.write(JSON.stringify({
             "message":"itmo308555",
             "x-result":xTest,
             "x-body":xBody
             }
-            ))
+            )) */
+    
+     res.text({ message: 'itmo308555', "x-result": xTest, "x-body": xBody })
     
     //res.json({ message: 'itmo308555', "x-result": xTest, "x-body": xBody })
 })
