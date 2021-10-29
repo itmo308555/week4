@@ -45,8 +45,8 @@ app.post('/result4/', (req, res) => {
    
           res.write(JSON.stringify({
             "message":"itmo308555",
-            "x-result":xTest,
-            "x-body":xBody
+            "x-result":headers,
+            "x-body":data
             }
             ))
       }
