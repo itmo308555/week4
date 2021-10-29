@@ -39,6 +39,10 @@ app.post('/result4/', (req, res) => {
             data += chunk;
             }).on('end', () => {
           })
+    
+    const xTest = req?.headers?.['x-test']
+    const xBody = req?.body
+   
           res.write(JSON.stringify({
             "message":"itmo308555",
             "x-result":xTest,
