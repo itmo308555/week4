@@ -24,9 +24,9 @@ app.post('/result4/', (req, res) => {
     const xBody = req?.body
     //res.json({ message: 'itmo308555', "x-result": xTest, "x-body": xBody })
      res.write(JSON.stringify({
-            "message":"itmo308555",
-            "x-result":xTest,
-            "x-body":xBody
+            'message':'itmo308555',
+            'x-result':xTest,
+            'x-body':xBody
             }
             ))
     
@@ -68,9 +68,9 @@ app.get('/result4/', (req, res) => {
     const xBody = 'abc'
     
    res.write(JSON.stringify({
-            "message":"itmo308555",
-            "x-result":xTest,
-            "x-body":xBody
+            'message':'itmo308555',
+            'x-result':xTest,
+            'x-body':xBody
             }
             ))
     
