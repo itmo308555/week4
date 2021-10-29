@@ -15,6 +15,10 @@ const CORS = {
 
 app.post('/result4/', (req, res) => {
     
+     res.writeHead(200,{
+              'Content-Type':'application/json',
+              ...CORS,
+          })
    
     const xTest = req?.headers?.['x-test']
     const xBody = req?.body
