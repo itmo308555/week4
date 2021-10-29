@@ -15,7 +15,7 @@ const CORS = {
 
 app.post('/result4/', (req, res) => {
     
-     res.writeHead(200,{
+   /*  res.writeHead(200,{
               'Content-Type':'application/json',
               ...CORS,
           })
@@ -28,7 +28,29 @@ app.post('/result4/', (req, res) => {
             "x-result":xTest,
             "x-body":xBody
             }
+            ))*/
+    
+      res.writeHead(200,{
+              'Content-Type':'application/json',
+              ...CORS,
+          })
+          let data = '';
+          await req.on('data', function(chunk){
+            data += chunk;
+            }).on('end', () => {
+          })
+          res.write(JSON.stringify({
+            "message":"itmo308555",
+            "x-result":xTest,
+            "x-body":xBody
+            }
             ))
+      }
+      res.end()
+    
+    
+    
+    
 })
 app.get('/result4/', (req, res) => {
     
