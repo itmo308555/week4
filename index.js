@@ -4,7 +4,7 @@ const cors = require('cors')
 const PORT = process.env.PORT || 5000
 const app = express()
 app.use(bodyParser.text())
-#app.use(cors())
+app.use(cors())
 
 const CORS = {
     'Access-Control-Allow-Origin': '*',
@@ -15,13 +15,7 @@ const CORS = {
 
 app.post('/result4/', (req, res) => {
     
-    
-     res.writeHead(200,{
-              'Content-Type':'application/json',
-              ...CORS,
-          })
-    
-    
+   
     const xTest = req?.headers?.['x-test']
     const xBody = req?.body
     res.json({ message: 'id71293382', "x-result": xTest, "x-body": xBody })
